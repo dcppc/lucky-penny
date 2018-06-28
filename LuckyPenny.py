@@ -11,7 +11,7 @@ def main():
         setup()
     else:
         # We have a bot key, so do the dang thing
-        favorite()
+        retweet()
 
 def setup():
     k = rmm.TwitterKeymaker()
@@ -37,6 +37,19 @@ def shepherd():
             sheep_class = rmm.SocialSheep
     )
     return sh
+
+def retweet():
+    # Get a flock object
+    sh = shepherd()
+
+    # Perform the "favorite" action
+    sh.perform_parallel_action(
+            'retweet',
+            sleep = 60,
+            capacity = 20,
+            search_terms = ['#commonspilot','@nih_dcppc'],
+            follow = True
+    )
 
 def favorite():
     # Get a flock object
