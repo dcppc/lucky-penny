@@ -47,7 +47,7 @@ def favorite():
             'favorite',
             sleep = 60,
             capacity = 20,
-            search_term = '#dcppc_test',
+            search_terms = ['#commonspilot','@nih_dcppc'],
             follow = True
     )
 
