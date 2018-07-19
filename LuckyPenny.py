@@ -47,7 +47,7 @@ def retweet():
             'retweet',
             sleep = 60,
             capacity = 200,
-            search_terms = ['#commonspilot','@nih_dcppc'],
+            search_terms = ['#commonspilot'],
             follow = True
     )
 
