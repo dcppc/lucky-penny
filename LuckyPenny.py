@@ -46,7 +46,7 @@ def retweet():
     sh.perform_parallel_action(
             'retweet',
             sleep = 60,
-            capacity = 20,
+            capacity = 200,
             search_terms = ['#commonspilot','@nih_dcppc'],
             follow = True
     )
@@ -59,8 +59,8 @@ def favorite():
     sh.perform_parallel_action(
             'favorite',
             sleep = 60,
-            capacity = 20,
-            search_terms = ['#commonspilot','@nih_dcppc'],
+            capacity = 200,
+            search_terms = ['#commonspilot'],
             follow = True
     )
 
