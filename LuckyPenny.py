@@ -42,27 +42,17 @@ def retweet():
     # Get a flock object
     sh = shepherd()
 
-    # Perform the "favorite" action
+    # Perform the "retweet" action
+    # (change to "favorite" to just favorite tweets)
     sh.perform_parallel_action(
             'retweet',
             sleep = 60,
-            capacity = 200,
-            search_terms = ['#commonspilot'],
+            capacity = 20,
+            search_terms = ['#commonspilot','@nih_dcppc'],
+            ignore_by = ['@nih_dcppc'],
             follow = True
     )
 
-def favorite():
-    # Get a flock object
-    sh = shepherd()
-
-    # Perform the "favorite" action
-    sh.perform_parallel_action(
-            'favorite',
-            sleep = 60,
-            capacity = 200,
-            search_terms = ['#commonspilot'],
-            follow = True
-    )
 
 if __name__=="__main__":
     main()
